@@ -1,0 +1,194 @@
+@CHARSET "ISO-8859-1";
+#bloc_page
+{
+    width: 1100px;
+    margin: auto;
+   /*background-color:#80F0E6;*/
+}
+header
+{
+   display:flex;
+   justify-content: space-around;
+   background-color:#E4DEDD;
+   /*#80F0E6
+   background-color:#E4DEDD;*/
+   height:170px;
+   background: url('separateur.png') repeat-x bottom #80F0E6;
+}
+.acceuil
+{
+	text-decoration:overline red ;
+}
+/*navigation*/
+nav ul
+{
+	display:flex;
+	list-style: none;
+}    
+nav ul a
+{
+	text-decoration:none;
+	color:white;
+	margin-right:40px;
+	font-size: 1.1em;
+	
+}
+.down
+{
+	display:none;
+   /* margin-right:500px;*/
+    padding: 0px;
+   
+
+}
+.down a
+{
+	font-size: 0.9em;
+}
+a:hover
+{
+	color:red;
+}
+nav ul li:hover .down
+{
+	display:flex;
+	flex-direction:column;
+	margin-right:-30px;
+}
+#logo
+{
+	display:flex;
+}
+#logo img
+{
+
+	width:50px;
+	height:50px;
+	margin-top: 12px;
+	margin-left: 12px;
+}
+#logo h1
+{
+	width:25px;
+	margin-top:5px;
+	margin-left:5px;
+	
+}
+#logo p
+{
+	margin-top:40px;
+	margin-left:-10px;
+}
+nav ul li
+{
+	margin-top:10px;
+}
+
+.essai
+{
+	/*width:70px;*/
+	background-color:blue;
+	margin-top:-20px;
+}
+.essai h1
+{
+	position:relative;
+	top:50%;
+	left:47%;
+	color:white;
+	font-size:1em;
+}
+/*.bordure
+{
+	border:1px black solid;
+	padding:10px;
+	border-radius: 15px 15px;
+	background-color:red;
+	<li><a href="#" class="bordure">Publier Une Annonce</a></li>
+}*/
+.couleur
+{
+	border:1px black solid;
+	padding:10px;
+	border-radius: 15px 15px;
+	background-color:red;*/
+	color:white;
+	/*font-size:1em;*/
+	
+}
+/*.blancc
+{
+	margin-top:20px;
+}*/
+.blancc a:hover{
+	color: white;
+}
+.blanc a:hover{
+	color: white;
+}
+
+article a:hover div
+{
+	opacity:1;
+}
+#conteneur
+{
+   margin-right:190px;
+}
+
+/*footer*/
+#final
+{
+	background-color: #80F0D1;
+}
+footer
+{
+	display:flex;
+	justify-content: space-around;
+	height:250px;
+	background: url('separateur.png') repeat-x top;
+    
+}
+footer ul 
+{
+	list-style: none;
+	display:flex;
+	flex-direction: column;
+}
+footer ul li
+{
+    margin-top: 20px;
+    margin-right: 100px;
+}
+footer ul a
+{
+	text-decoration:none;
+	color:white;
+	
+}
+.element2 img
+{
+	width:20px;
+	height: 20px;
+	margin-right: 10px;
+	margin-top: 100px;
+}
+.element1
+{
+	display:flex;
+	flex-direction:column; 
+	
+}
+.element1 img
+{
+	width:100px;
+	height: 100px;
+	margin-left: 20px;
+	
+}
+.element1 h1
+{
+    color:white;
+   font-size: 1.3em;
+   margin-left: 20px;
+}

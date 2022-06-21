@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../1351.js"></script>
+<title>Ajouter un agent</title>
+<link rel="stylesheet" href="../Style/MonStyle.css">
+<link rel="icon" href="../Images/icon4.ico" />
+<style>
+.my-form {
+	width: 650px;
+}
+
+a.log {
+	position: fixed;
+	float: left;
+	background: #222;
+	border-radius: 3px 3px 3px 3px;
+	height: 20px;
+	top: 10px;
+	right: 10px;
+}
+</style>
+</head>
+<body>
+	<header class="header black-bg">
+		<i class="fas fa-bars toggle" onclick="toggle()" id="b"></i>
+		<h3 class="title" onclick="window.location.href = '/backoffice/prive/home';">AGENCE IMMOBILIER LUXE</h3>
+		<a class="log" href="/backoffice/logout" id="discon">Logout</a>
+	</header>
+	<div id="contenu">
+		<form class="my-form" action="ajoutbien" method="get">
+
+			<!-- form header -->
+			<div class="form-header">
+				<h1>Nouveau Bien Immobilier</h1>
+			</div>
+			
+		</form>
+	</div>
+	<script>
+		function toggle() {
+			document.getElementById("nav").classList.toggle('active');
+			document.getElementById("contenu").classList.toggle('active');
+		}
+	</script>
+</body>
+</html>

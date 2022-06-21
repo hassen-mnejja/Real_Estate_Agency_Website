@@ -1,0 +1,105 @@
+<script src="JS/1351.js"></script>
+<header class="header black-bg">
+	<i class="fas fa-bars toggle" onclick="toggle()" id="b"></i>
+	<h3 class="title" onclick="window.location.href = '/backoffice/prive/home';">AGENCE IMMOBILIER LUXE</h3>
+	<a class="log" href="/backoffice/logout" id="discon">Logout</a>
+</header>
+<div class="nav" id="nav" style="display: block">
+	<div class="nav-item">
+		<div class="main-item">
+			<i class="fad fa-house-user fi"></i> <span>Propriétaire</span>
+		</div>
+		<div class="sub-items">
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouterprop';">
+				<i class="fad fa-user-plus fi"></i> <span>Ajouter</span>
+			</div>
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/chercherprop';">
+				<i class="fad fa-search fi"></i> <span>Chercher</span>
+			</div>
+		</div>
+	</div>
+	<div class="nav-item">
+		<div class="main-item">
+			<i class="fad fa-user-headset fi"></i> <span>Agent</span>
+		</div>
+		<div class="sub-items">
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouteragent';">
+				<i class="fad fa-user-plus fi"></i> <span>Ajouter</span>
+			</div>
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/chercheragent';">
+				<i class="fad fa-search fi"></i> <span>Chercher</span>
+			</div>
+		</div>
+	</div>
+	<div class="nav-item">
+		<div class="main-item">
+			<i class="fad fa-house-return fi"></i> <span>Visite</span>
+		</div>
+		<div class="sub-items">
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajoutervisite';">
+				<i class="fad fa-calendar-plus fi"></i> <span>Programmer</span>
+			</div>
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/cherchervisite';">
+				<i class="fad fa-search fi"></i> <span>Chercher</span>
+			</div>
+		</div>
+	</div>
+	<div class="nav-item">
+		<div class="main-item">
+			<i class="fad fa-house fi"></i> <span>Bien</span>
+		</div>
+		<div class="sub-items">
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouterbien';">
+				<i class="fad fa-plus fi"></i> <span>Ajouter</span>
+			</div>
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/chercherbien';">
+				<i class="fad fa-search fi"></i> <span>Chercher</span>
+			</div>
+		</div>
+	</div>
+	<div class="nav-item">
+		<div class="main-item">
+			<i class="fad fa-user fi"></i> <span>client</span>
+		</div>
+		<div class="sub-items">
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouterclient';">
+				<i class="fad fa-user-plus fi"></i> <span>Ajouter</span>
+			</div>
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/chercherclient';">
+				<i class="fad fa-search fi"></i> <span>Chercher</span>
+			</div>
+		</div>
+	</div>
+	<div class="nav-item">
+		<div class="main-item">
+			<i class="fad fa-file fi"></i> <span>contrat</span>
+		</div>
+		<div class="sub-items">
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajoutercontrat';">
+				<i class="fad fa-file-plus fi"></i> <span>Ajouter</span>
+			</div>
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/cherchercontrat';">
+				<i class="fad fa-file-search fi"></i> <span>Chercher</span>
+			</div>
+		</div>
+	</div>
+	<div class="nav-item">
+		<div class="main-item">
+			<i class="fad fa-comments-alt fi"></i> <span>Message</span>
+		</div>
+		<div class="sub-items">
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ecriremessage';">
+				<i class="fad fa-comment-alt-plus fi"></i> <span>Ajouter</span>
+			</div>
+			<div class="sub-item" onclick="window.location.href = '/backoffice/prive/boitemessage';">
+				<i class="fad fa-inbox fi"></i> <span>Chercher</span>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function toggle() {
+		document.getElementById("nav").classList.toggle('active');
+		document.getElementById("contenu").classList.toggle('active');
+	}
+</script>

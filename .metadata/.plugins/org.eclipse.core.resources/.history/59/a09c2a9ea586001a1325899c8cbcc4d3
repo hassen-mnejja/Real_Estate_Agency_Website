@@ -1,0 +1,298 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../1351.js"></script>
+<title>Ajouter un agent</title>
+<link rel="stylesheet" href="../Style/MonStyle.css">
+<link rel="icon" href="../Images/icon4.ico" />
+<style>
+.my-form {
+	width: 650px;
+}
+
+a.log {
+	position: fixed;
+	float: left;
+	background: #222;
+	border-radius: 3px 3px 3px 3px;
+	height: 20px;
+	top: 10px;
+	right: 10px;
+}
+</style>
+</head>
+<body>
+	<header class="header black-bg">
+		<i class="fas fa-bars toggle" onclick="toggle()" id="b"></i>
+		<h3 class="title" onclick="window.location.href = '/backoffice/prive/home';">AGENCE IMMOBILIER LUXE</h3>
+		<a class="log" href="/backoffice/logout" id="discon">Logout</a>
+	</header>
+	<div id="contenu">
+		<form class="my-form" action="ajoutbien" method="get">
+
+			<!-- form header -->
+			<div class="form-header">
+				<h1>Nouveau Bien Immobilier</h1>
+
+			</div>
+			<div style="justify-content: center; display: flex;">
+				<button type="button" onclick="myFunction1()" style="height: 30px; font-size: 20px;">Appartement</button>
+				<button type="button" onclick="myFunction2()" style="height: 30px; font-size: 20px;">Maison</button>
+				<button type="button" onclick="myFunction2()" style="height: 30px; font-size: 20px;">Entrepot</button>
+				<button type="button" onclick="myFunction2()" style="height: 30px; font-size: 20px;">Terrain</button>
+				<button type="button" onclick="myFunction2()" style="height: 30px; font-size: 20px;">Studio</button>
+				<button type="button" onclick="myFunction2()" style="height: 30px; font-size: 20px;">Emplacement</button>
+			</div>
+
+			<!-- form body -->
+			<div class="form-body" id="maison" style="display: block;">
+
+				<!-- Firstname and Lastname -->
+				<div class="horizontal-group">
+					<div class="form-group">
+						<label for="nom" class="label-title">Descriptif (maison) *</label> <input type="text" id="descriptif" name="nom" class="form-input" placeholder="saisir votre nom" />
+					</div>
+				</div>
+
+				<div class="horizontal-group">
+					<div class="form-group left">
+						<label for="nom" class="label-title">Descriptif (maison) *</label> <label for="nom1"><input type="radio" id="nom1" name="nom" class="form-input" onClick="myFunction4()" /> afficher</label> <label
+							for="nom2"
+						><input type="radio" id="nom2" name="nom" class="form-input" onClick="myFunction3()" /> supprimer</label>
+					</div>
+				</div>
+
+				<!-- Phone number -->
+				<div class="horizontal-group">
+					<div class="form-group left">
+						<label for="numpriv" class="label-title">Identifiant du propriétaire *</label> <input type="tel" id="numpriv" name="numpriv" class="form-input" placeholder="xx xxx xxx"
+							pattern="[0-9]{2} [0-9]{3} [0-9]{3}"
+						/> <span class="validity"></span>
+					</div>
+					<div class="form-group right">
+						<label for="numtrav" class="label-title">Code de la classe Standard *</label> <input type="tel" id="numtrav" name="numtrav" class="form-input" placeholder="xx xxx xxx"
+							pattern="[0-9]{2} [0-9]{3} [0-9]{3}"
+						/>
+					</div>
+				</div>
+
+				<!-- Numero de tarvail -->
+
+				<div class="horizontal-group">
+					<div class="form-group left">
+						<label for="debutdispo" class="label-title">Datte de soumission *</label> <input type="date" id="debutdispo" name="debutdispo" class="form-input">
+					</div>
+					<div class="form-group right">
+						<label for="findispo" class="label-title">Date de disposition *</label> <input type="date" id="findispo" name="findispo" class="form-input">
+					</div>
+				</div>
+
+
+				<!-- Adress -->
+				<fieldset>
+					<legend> Adress : </legend>
+					<div class="horizontal-group">
+						<div class="form-group left">
+							<label for="numpriv" class="label-title">Rue *</label> <input type="tel" id="numpriv" name="numpriv" class="form-input" placeholder="xx xxx xxx" pattern="[0-9]{2} [0-9]{3} [0-9]{3}" /> <span
+								class="validity"
+							></span>
+						</div>
+						<div class="form-group right">
+							<label for="numtrav" class="label-title">Numero *</label> <input type="tel" id="numtrav" name="numtrav" class="form-input" placeholder="xx xxx xxx" pattern="[0-9]{2} [0-9]{3} [0-9]{3}" />
+						</div>
+					</div>
+					<div class="horizontal-group">
+						<div class="form-group left">
+							<label for="numpriv" class="label-title">Code Postal *</label> <input type="tel" id="numpriv" name="numpriv" class="form-input" placeholder="xx xxx xxx" pattern="[0-9]{2} [0-9]{3} [0-9]{3}" />
+							<span class="validity"></span>
+						</div>
+						<div class="form-group right">
+							<label for="numtrav" class="label-title">Localité *</label> <input type="tel" id="numtrav" name="numtrav" class="form-input" placeholder="xx xxx xxx" pattern="[0-9]{2} [0-9]{3} [0-9]{3}" />
+						</div>
+					</div>
+				</fieldset>
+
+			</div>
+
+			<div class="form-body" id="Appartement" style="display: none;">
+
+				<!-- Firstname and Lastname -->
+				<div class="horizontal-group">
+					<div class="form-group left">
+						<label for="nom" class="label-title">Nom *</label> <input type="text" id="nom" name="nom" class="form-input" placeholder="saisir votre nom" />
+					</div>
+					<div class="form-group right">
+						<label for="prenom" class="label-title">Prenom *</label> <input type="text" id="prenom" name="prenom" class="form-input" placeholder="saisir votre prenom " />
+					</div>
+				</div>
+
+				<!-- Phone number -->
+				<div class="horizontal-group">
+					<div class="form-group left">
+						<label for="numpriv" class="label-title">N° tel privé *</label> <input type="tel" id="numpriv" name="numpriv" class="form-input" placeholder="xx xxx xxx" pattern="[0-9]{2} [0-9]{3} [0-9]{3}" />
+						<span class="validity"></span>
+					</div>
+					<div class="form-group right">
+						<label for="numtrav" class="label-title">N° tel de travail *</label> <input type="tel" id="numtrav" name="numtrav" class="form-input" placeholder="xx xxx xxx"
+							pattern="[0-9]{2} [0-9]{3} [0-9]{3}"
+						/>
+					</div>
+				</div>
+
+				<!-- Numero de tarvail -->
+				<fieldset>
+					<legend> Le numero de travail est disponible : </legend>
+					<div class="horizontal-group">
+						<div class="form-group left">
+							<label for="debutdispo" class="label-title">De *</label> <input type="time" id="debutdispo" name="debutdispo" class="form-input">
+						</div>
+						<div class="form-group right">
+							<label for="findispo" class="label-title">Vers *</label> <input type="time" id="findispo" name="findispo" class="form-input">
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Adress -->
+				<div class="form-group">
+					<label for="adress" class="label-title">Adress *</label>
+					<textarea class="form-input" name="adress" rows="4" cols="50" style="height: auto"></textarea>
+				</div>
+
+			</div>
+			<input type="hidden" id="type" name="typeb" value="3487">
+			<!-- form-footer -->
+			<div class="form-footer">
+				<span>* obligatoire</span> <a href="../home">Retour</a>
+				<button type="submit" class="btn">Ajouter</button>
+			</div>
+
+		</form>
+
+	</div>
+	<div class="nav" id="nav" style="display: block">
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-house-user fi"></i> <span>Propriétaire</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouterprop';">
+					<i class="fad fa-user-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/chercherprop';">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-user-headset fi"></i> <span>Agent</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouteragent';">
+					<i class="fad fa-user-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/chercheragent';">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-house-return fi"></i> <span>Visite</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item">
+					<i class="fad fa-calendar-plus fi"></i> <span>Programmer</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-house fi"></i> <span>Bien</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouterbien';">
+					<i class="fad fa-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-user fi"></i> <span>client</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item">
+					<i class="fad fa-user-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-file fi"></i> <span>contrat</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item">
+					<i class="fad fa-file-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-file-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-comments-alt fi"></i> <span>Message</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item">
+					<i class="fad fa-file-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-file-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function myFunction1() {
+			document.getElementById("maison").style.display = "none";
+			document.getElementById("Appartement").style.display = "block";
+			document.getElementById("type").value = "appartement";
+		}
+		function myFunction2() {
+			document.getElementById("maison").style.display = "block";
+			document.getElementById("Appartement").style.display = "none";
+			document.getElementById("type").value = "maison";
+		}
+		function myFunction3() {
+			document.getElementById("descriptif").type = "hidden";
+		}
+		function myFunction4() {
+			document.getElementById("descriptif").type = "text";
+		}
+	</script>
+	<script type="text/javascript">
+		function changeFunc() {
+			var selectBox = document.getElementById("selectBox");
+			var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+			alert(selectedValue);
+		}
+	</script>
+	<script>
+		function toggle() {
+			document.getElementById("nav").classList.toggle('active');
+			document.getElementById("contenu").classList.toggle('active');
+		}
+	</script>
+</body>
+</html>

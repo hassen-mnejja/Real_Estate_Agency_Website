@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1">
+    <title>Ajouter un propriétaire</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/MonStyle.css">
+    <link rel="icon" href="../Images/icon4.ico" />
+    <style>
+      .my-form {
+        width:650px;
+      }
+    </style>
+  </head>
+  <body style = "background:linear-gradient(to right, #5b7380 0%, #28829e 50%, #5b7380 99%);">
+    
+    <!-- page header -->
+  	<div style=" height : 120px; color : white;text-align: center; font-family: 'Titillium Web', sans-serif;">
+	  <div style="padding : 10px 0;">
+ 	    <h1>AGENCE IMMOBILIER LUXE</h1>
+	    <h2>Votre projet immobilier mérite l'expertise d'un professionnel </h2>  
+ 	  </div>
+	</div> 
+	
+    <form class="my-form" action="ajoutproprietaire" method="get">
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>Nouveau Propriétaire</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Nom et Prenom -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="nom" class="label-title">Nom *</label>
+            <input type="text" id="nom"  name="nom" class="form-input" placeholder="saisir votre nom" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="prenom" class="label-title">Prenom *</label>
+            <input type="text" id="prenom" name="prenom" class="form-input" placeholder="saisir votre prenom " required="required" />
+          </div>
+        </div>
+
+        <!-- Num Tel -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="numpriv" class="label-title">N° tel privé *</label>
+            <input type="tel" id="numpriv" name="numpriv" class="form-input" placeholder="xx xxx xxx" required="required" pattern="[0-9]{2} [0-9]{3} [0-9]{3}"/>
+            <span class="validity"></span>
+          </div>
+          <div class="form-group right">
+            <label for="numtrav" class="label-title">N° tel de travail *</label>
+            <input type="tel" id="numtrav" name="numtrav" class="form-input" placeholder="xx xxx xxx" required="required" pattern="[0-9]{2} [0-9]{3} [0-9]{3}"/>
+          </div>
+        </div>
+
+        <!-- Numero de tarvail -->
+        <fieldset>
+          <legend> Le numero de travail est disponible : </legend>
+          <div class="horizontal-group">
+            <div class="form-group left">
+              <label for="debutdispo" class="label-title">De *</label>
+              <input type="time" id="debutdispo" name="debutdispo" class="form-input" required="required">
+            </div>
+            <div class="form-group right">
+              <label for="findispo" class="label-title">Vers *</label>
+              <input type="time" id="findispo" name="findispo" class="form-input" required="required">
+            </div>
+          </div>
+        </fieldset>
+        
+        <!-- Adresse -->
+        <div class="form-group">
+          <br><label for="adress" class="label-title">Adresse *</label>
+          <textarea class="form-input" name="adress" rows="4" cols="50" style="height:auto" required="required"></textarea>
+        </div>
+      </div>
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <span>* obligatoire</span>
+        <a href="../home">Retour</a>
+        <button type="submit" class="btn">Ajouter</button>
+      </div>
+      
+    </form>
+    
+  </body>
+</html>

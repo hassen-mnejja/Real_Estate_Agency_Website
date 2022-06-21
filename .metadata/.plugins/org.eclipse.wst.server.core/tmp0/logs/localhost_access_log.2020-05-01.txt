@@ -1,0 +1,11 @@
+127.0.0.1 - - [01/May/2020:17:21:50 +0100] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:21:52 +0100] "GET /backoffice HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:21:53 +0100] "GET /backoffice/ HTTP/1.1" 200 4075
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:21:53 +0100] "GET /backoffice/Images/login.jpg HTTP/1.1" 200 81110
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:22:02 +0100] "POST /backoffice/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:22:02 +0100] "GET /backoffice/prive/home HTTP/1.1" 200 4067
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:22:02 +0100] "GET /backoffice/Style/MonStyle.css HTTP/1.1" 200 4924
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:22:02 +0100] "GET /backoffice/1351.js HTTP/1.1" 200 5753
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:22:05 +0100] "GET /backoffice/prive/ajouterbien HTTP/1.1" 200 22747
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:22:05 +0100] "GET /backoffice/jquery-3.4.1.js HTTP/1.1" 200 290960
+0:0:0:0:0:0:0:1 - - [01/May/2020:17:22:05 +0100] "GET /backoffice/ville.js HTTP/1.1" 200 4563

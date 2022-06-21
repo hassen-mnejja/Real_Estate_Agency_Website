@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Afficher propriétaire</title>
+<link rel="stylesheet" type="text/css" href="../Styles/MonStyle.css">
+<link rel="icon" href="Images/icon4.ico" />
+<style>
+.my-form {
+  width:1000px;
+}
+.aa:hover{
+background-color : rgba(0,0,0,0);
+color : #4088a3;
+}
+.aa:link, .aa:visited {
+  background-color: rgba(0,0,0,0);
+  color:#666;
+  text-decoration: none;
+  display: inline-block;
+  border:none;
+  padding:0px 0px;
+}
+</style>
+</head>
+  <body style = "background:linear-gradient(to right, #5b7380 0%, #28829e 50%, #5b7380 99%); "media="visibility:hidden;">
+  	<div style=" height : 120px; color : white;text-align: center; font-family: 'Titillium Web', sans-serif;">
+	  </BR>
+ 	  <h1>AGENCE IMMOBILIER LUXE</h1>
+	  <h2>Votre projet immobilier mérite l'expertise d'un professionnel </h2>  
+ 	  </BR>
+	</div>  
+	
+    <form class="my-form" action="afficheproprietaire" method="get">
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>Chercher Propriétaire</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body" media="visibility:visible;">
+        <table id="elements">
+          <tr>
+            <th>IdProp</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+    		<th>NumPriv</th>
+    		<th>NumTrav</th>
+    		<th>DebutDispo</th>
+    		<th>FinDispo</th>
+    		<th>Adress</th>
+  	 	  </tr>
+		  <c:forEach var="prop" items="${listeprop}">
+		    <tr>
+		      <td><a class="aa" style="text-align: right;" href="../descriptifprop?identifiant=${prop.idProp}">${prop.idProp}</a></td>
+    		  <td>${prop.nom}</td>
+    		  <td>${prop.prenom}</td>
+    		  <td>${prop.numPriv}</td>
+    		  <td>${prop.numTrav}</td>
+    		  <td>${prop.debutDispo}</td>
+    		  <td>${prop.finDispo}</td>
+    		  <td>${prop.adress}</td>
+  	  	    </tr>
+		  </c:forEach>
+		</table>
+	  </div>
+      <!-- form-footer -->
+      <div class="form-footer">
+        <a href="chercheproprietaire.html">Retour</a>
+        <button onclick="window.print();return false;">print</button>
+      </div>
+    </form>
+  </body>
+</html>

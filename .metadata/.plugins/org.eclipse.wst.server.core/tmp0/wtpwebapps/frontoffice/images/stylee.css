@@ -1,0 +1,126 @@
+body
+{
+	background-color: white;
+}
+#bloc_page
+{
+    width: 1100px;
+    margin: auto;
+}
+header
+{
+   display:flex;
+   justify-content: space-around;
+   background-color:#80F0E6;
+}
+ul
+{
+	display:flex;
+	list-style: none;
+}
+#logo
+{
+	display:flex;
+}
+#logo img
+{
+
+	width:50px;
+	height:50px;
+	margin-top: 12px;
+	margin-left: 12px;
+}
+#logo h1
+{
+	width:25px;
+	margin-top:5px;
+	margin-left:5px;
+	
+}
+nav ul a
+{
+	text-decoration:none;
+	color:white;
+	margin-right:40px;
+	
+}
+#logo p
+{
+	margin-top:40px;
+	margin-left:-10px;
+}
+nav ul li
+{
+	margin-top:10px;
+}
+.bordure
+{
+	border:1px black solid;
+	padding:10px;
+	border-radius: 15px 15px;
+	background-color:red;
+}
+.couleur
+{
+	color:black;
+}
+body img
+{
+	width:1100px;
+	height:300px;
+	margin-top:25px;
+}
+section
+{
+	display:flex;
+	justify-content: space-between;
+}
+.immobilier_neuf
+{
+	margin-top: 50px;
+	height:550px;
+	width:550px;
+	border-radius: 5px 5px;
+	margin-left: 50px;
+	background:url('i.jpg') no-repeat;
+	position: relative;
+	opacity:0.8;
+}
+#div1
+{
+	position:absolute;
+	padding-top:100px;
+	padding-left:90px;
+	color:white;
+	font-size:1.7em;
+}
+section a:hover div
+{
+	opacity:1;
+}
+#conteneur
+{
+   margin-left:150px;
+}
+.Vente
+{
+	margin-top: 50px;
+	height:100px;
+	width:450px;
+	border-radius: 5px 5px;
+	
+	background-color:red;
+	position: relative;
+	opacity:0.8;
+}
+.Location
+{
+   
+	margin-top: 5px;
+	height:100px;
+	width:450px;
+	border-radius: 5px 5px;
+	background-color:red;
+	position: relative;
+	opacity:0.8;
+}

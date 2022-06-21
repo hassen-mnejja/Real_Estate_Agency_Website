@@ -1,0 +1,143 @@
+@CHARSET "ISO-8859-1";
+body
+{
+	background-image: url(back.jpg);
+}
+
+form
+{
+	width:700px;
+	background-color: 
+}
+#one
+{
+    margin-left: 40%;
+	background-color: #eff0f1;
+	border:1px solid black;
+	border-radius: 5px;
+	width:200px;
+	padding: 25px;
+	margin-top: 50px;
+	overflow:hidden;
+	margin-top: 100px;
+}
+.down a
+{
+	font-size: 0.9em;
+}
+.seconnecter
+{
+	margin-top:-49px;
+	width:250px;
+	height:75px;
+	margin-left:-25px;
+	background-color:orange;
+
+}
+#one h3
+{
+	font-size : 0.9em;
+}
+#one h1 
+{
+	position:relative;
+	top:30%;
+	left:25%;
+	color:white;
+	font-size:1.5em;
+}
+.email
+{
+	margin-bottom:15px;
+	margin-left:10px;
+	
+	border-radius:5px;
+	
+}
+.connect
+{
+	background-color:orange;
+	border:1px solid black;
+	border-radius:20px 20px;
+	height:40px;
+	margin-left:50px;
+	color:white;
+	width:75x;
+}
+#two
+{
+	background-color: #eff0f1;
+	border:1px solid black;
+	border-radius: 5px;
+	width:200px;
+	padding: 25px;
+	margin-top: 50px;
+	overflow:hidden;
+	margin-top: 10px;
+	margin-left: 40%;
+}
+#two h1 
+{
+	color:black;
+	font-size:0.9em;
+	margin-top:-20px;
+	margin-left:10px;
+}
+.please
+{
+	background-color:orange;
+	border:1px solid black;
+	border-radius:20px 20px;
+	height:40px;
+	margin-left:50px;
+	color:white;
+	width:80px;
+}
+#one a
+{
+	text-decoration: none;
+	font-size:0.9em;
+	margin-top:20px;
+	color:blue;
+}
+.testa
+{
+	margin-top:10px;
+	margin-left:35px;
+}
+#one a:hover
+{
+	color:blue;
+}
+.annonces a
+{
+	text-decoration:none;
+	color:white;
+	padding:2px;
+	
+}
+.favoris button
+{
+	position:relative;
+	background-color:red;
+	border:1px solid black;
+	border-radius:5px 5px;
+	/*width:130px;*/
+	color:white;
+	padding:2px;
+	top:0%;
+	font-weight:bold;
+	font-size:0.75em;
+}
+.favoris div
+{
+	margin-top:-20px;
+	
+}
+.message
+{
+	color:red;
+	margin-left:50px;
+	size-weight:bold;
+	font-size:1.5em;
+}

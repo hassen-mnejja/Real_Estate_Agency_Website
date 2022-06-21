@@ -1,0 +1,245 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>${prop.prenom}${prop.nom}</title>
+<link rel="stylesheet" type="text/css" href="Style/MonStyle.css">
+<link rel="icon" href="Images/icon4.ico" />
+<style>
+.my-form {
+	width: 700px;
+}
+</style>
+</head>
+<body>
+<body style="background: linear-gradient(to right, #5b7380 0%, #28829e 50%, #5b7380 99%);">
+
+	<header class="header black-bg">
+		<i class="fas fa-bars toggle" onclick="toggle()" id="b"></i>
+		<h3 class="title" onclick="window.location.href = '/backoffice/prive/home';">AGENCE IMMOBILIER LUXE</h3>
+		<a class="log" href="/backoffice/logout" id="discon">Logout</a>
+	</header>
+	<div id="contenu">
+		<form class="my-form" action="modifieprop" method="get">
+
+			<!-- form header -->
+			<div class="form-header">
+				<h1>${prop.prenom}${prop.nom} (ID=${prop.idProp})</h1>
+			</div>
+
+			<!-- form body -->
+			<div class="form-body">
+
+				<!-- Nom et Prenom -->
+				<div class="horizontal-group">
+					<div class="form-group left">
+						<label for="mod1" class="label-title">Nom :</label> <input type="text" id="mod1" name="nom" class="form-input" value="${prop.nom}" style="display: none;" /> <label id="af1"
+							style="display: block; font-size: 20px;"
+						>${prop.nom}</label>
+					</div>
+					<div class="form-group right">
+						<label for="mod2" class="label-title">Prenom :</label> <input type="text" id="mod2" name="prenom" class="form-input" value="${prop.prenom}" style="display: none;" /> <label id="af2"
+							style="display: block; font-size: 20px;"
+						>${prop.prenom}</label>
+					</div>
+				</div>
+
+				<!-- Num tel -->
+				<div class="horizontal-group">
+					<div class="form-group left">
+						<label for="mod3" class="label-title">N° tel privé :</label> <input type="tel" id="mod3" name="numpriv" class="form-input" value="${prop.numPriv}" pattern="[0-9]{2} [0-9]{3} [0-9]{3}"
+							style="display: none;"
+						/> <span class="validity"></span> <label id="af3" style="display: block; font-size: 20px;">${prop.numPriv}</label>
+					</div>
+					<div class="form-group right">
+						<label for="mod4" class="label-title">N° tel de travail :</label> <input type="tel" id="mod4" name="numtrav" class="form-input" value="${prop.numTrav}" pattern="[0-9]{2} [0-9]{3} [0-9]{3}"
+							style="display: none;"
+						/> <span class="validity"></span> <label id="af4" style="display: block; font-size: 20px;">${prop.numTrav}</label>
+					</div>
+				</div>
+
+				<!-- Numero de tarvail -->
+				<fieldset>
+					<legend style="font-size: 17px; font-weight: bold;"> Le numéro de travail est disponible : </legend>
+					<div class="horizontal-group">
+						<div class="form-group left">
+							<label for="mod5" class="label-title">De :</label> <input type="time" id="mod5" name="debutdispo" class="form-input" value="${prop.debutDispo}" style="display: none;"> <label id="af5"
+								style="display: block; font-size: 20px;"
+							>${prop.debutDispo}</label>
+						</div>
+						<div class="form-group right">
+							<label for="mod6" class="label-title">Vers :</label> <input type="time" id="mod6" name="findispo" class="form-input" value="${prop.finDispo}" style="display: none;"> <label id="af6"
+								style="display: block; font-size: 20px;"
+							>${prop.finDispo}</label>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- Identifiant -->
+				<div>
+					<input type="hidden" name="idprop" value="${prop.idProp}"><br>
+				</div>
+
+				<!-- Adresse -->
+				<div class="form-group">
+					<div class="horizontal-group">
+						<label for="mod7" class="label-title">Adresse :</label>
+						<textarea class="form-input" id="mod7" name="adress" rows="4" cols="25" style="height: auto; display: none;">${prop.adress}</textarea>
+						<label id="af7" style="display: block; font-size: 20px;">${prop.adress}</label>
+					</div>
+				</div>
+
+				<!-- Liste des biens -->
+				<div class="form-group">
+					<label for="mod5" class="label-title">Liste des biens qu'il possède :</label>
+					<table id="elements">
+						<tr>
+							<th>IdBien</th>
+							<th>ModeOffre</th>
+							<th>TypeBien</th>
+							<th>PrixMax</th>
+							<th>SuperficieMin</th>
+							<th>Adresse</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<!-- form-footer -->
+			<div class="form-footer">
+				<div style="justify-content: center; display: flex;">
+					<span style="margin-left:290px" id="espace"></span>
+					<a href="home">Retour</a>
+					<button type="submit" class="btn" style="display: none; margin: 0 10px;" id="enreg">Enregistrer</button>
+					<button type="button" onclick="fonction1()" class="btn" style="display: block; margin: 0 10px;" id="mod">Modifier</button>
+					<button type="button" onclick="fonction2()" class="btn">Supprimer</button>
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+	<div class="nav" id="nav" style="display: block">
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-house-user fi"></i> <span>Propriétaire</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouterprop';">
+					<i class="fad fa-user-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/chercherprop';">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-user-headset fi"></i> <span>Agent</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouteragent';">
+					<i class="fad fa-user-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/chercheragent';">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-house-return fi"></i> <span>Visite</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item">
+					<i class="fad fa-calendar-plus fi"></i> <span>Programmer</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-house fi"></i> <span>Bien</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item" onclick="window.location.href = '/backoffice/prive/ajouterbien';">
+					<i class="fad fa-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-user fi"></i> <span>client</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item">
+					<i class="fad fa-user-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-file fi"></i> <span>contrat</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item">
+					<i class="fad fa-file-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-file-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="main-item">
+				<i class="fad fa-comments-alt fi"></i> <span>Message</span>
+			</div>
+			<div class="sub-items">
+				<div class="sub-item">
+					<i class="fad fa-file-plus fi"></i> <span>Ajouter</span>
+				</div>
+				<div class="sub-item">
+					<i class="fad fa-file-search fi"></i> <span>Chercher</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		function toggle() {
+			document.getElementById("nav").classList.toggle('active');
+			document.getElementById("contenu").classList.toggle('active');
+		}
+	</script>
+	<!-- JavaScript -->
+	<script>
+		function fonction1() {
+			for (var i = 1; i < 8; i++) {
+				document.getElementById("mod" + i).style.display = "block";
+				document.getElementById("af" + i).style.display = "none";
+			}
+			document.getElementById("enreg").style.display = "block";
+			document.getElementById("mod").style.display = "none";
+			document.getElementById("espace").style.marginLeft = "265px";
+		}
+
+		function fonction2() {
+			if (confirm("Voulez-vous vraiment supprimer cet agent?")) {
+				window.alert("Cet agent a été supprimé avec succès.");
+				location.href = "/backoffice/prive/supprimeagent?idagent=${agent.idAgent}";
+			}
+		}
+	</script>
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+127.0.0.1 - - [15/Apr/2020:22:15:26 +0100] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:15:29 +0100] "GET /backoffice/WEB-INF/home.jsp HTTP/1.1" 404 604
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:15:47 +0100] "GET /backoffice/home HTTP/1.1" 200 4349
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:15:47 +0100] "GET /backoffice/Styles/HomeStyle.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:15:49 +0100] "GET /backoffice/login HTTP/1.1" 200 1231
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:15:49 +0100] "GET /backoffice/Styles/MonStyle.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:15:49 +0100] "GET /favicon.ico HTTP/1.1" 404 720
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:15:54 +0100] "POST /backoffice/login HTTP/1.1" 200 796
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:15:55 +0100] "GET /backoffice/home HTTP/1.1" 200 4350
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:16:08 +0100] "GET /backoffice/prive/chercheproprietaire.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:16:09 +0100] "GET /backoffice/home HTTP/1.1" 200 4350
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:16:10 +0100] "GET /backoffice/prive/ajouteragent HTTP/1.1" 200 6392
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:16:10 +0100] "GET /backoffice/1351.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:20:19 +0100] "GET /backoffice/home HTTP/1.1" 200 4350
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:20:23 +0100] "GET /backoffice/prive/ajoutproprietaire.html HTTP/1.1" 200 3566
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:22:29 +0100] "GET /backoffice/prive/ajoutproprietaire.html HTTP/1.1" 200 3566
+0:0:0:0:0:0:0:1 - - [15/Apr/2020:22:22:29 +0100] "GET /backoffice/Images/icon4.ico HTTP/1.1" 200 5699

@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+E:\Formation\Workspace java2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\283364033.index
+\frontoffice\src
+E:\Formation\Workspace java2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1636258818.index
+\backoffice\src
+E:\Formation\Workspace java2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\771314456.index
+\agence immobilier\src
+E:\Formation\Workspace java2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4031073477.index
+\final\src
+E:\Formation\Workspace java2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2924004158.index
+\backoffice\src

@@ -1,0 +1,61 @@
+package agence.backoffice;
+
+import java.io.File;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SupprimeAgentServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public SupprimeAgentServlet() {
+		super();
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String idagent = request.getParameter("idagent");
+		String req = "DELETE FROM AGENT WHERE IDAGENT=" + idagent;
+		Connection con = null;
+		try {
+			Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+			String dataServerURL = "jdbc:derby://localhost:1527/Agence;shutdown=true";
+			con = DriverManager.getConnection(dataServerURL, "mohsen", "mohsen50");
+			Statement stmt = con.createStatement();
+			System.out.println(req);
+			stmt.executeUpdate(req);
+		} catch (SQLException se) {
+			if (!(se.getErrorCode() == 50000) && (se.getSQLState().equals("XJ015")))
+				System.out.println(se);
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		} finally {
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e2) {
+					e2.printStackTrace();
+				}
+			}
+		}
+		File path = new File("E:\\Formation\\Workspace java2\\backoffice\\WebContent\\Images\\Agent\\" + idagent + "\\");
+		deleteFile(path);
+		response.sendRedirect("/backoffice/prive/chercheragent");
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {}
+
+	public static void deleteFile(File element) {
+		if (element.exists()) { if (element.isDirectory()) { for (File sub : element.listFiles()) { deleteFile(sub); } } }
+		element.delete();
+	}
+
+}

@@ -1,0 +1,283 @@
+#bloc_page
+{
+    width: 1100px;
+    margin: auto;
+}
+header
+{
+   display:flex;
+   justify-content: space-around;
+   background-color:#80F0E6;
+   height:170px;
+}
+/*navigation*/
+nav ul
+{
+	display:flex;
+	list-style: none;
+}    
+nav ul a
+{
+	text-decoration:none;
+	color:white;
+	margin-right:40px;
+	font-size: 1.1em;
+	
+}
+.down
+{
+	display:none;
+   /* margin-right:500px;*/
+    padding: 0px;
+
+}
+a:hover
+{
+	color:red;
+}
+nav ul li:hover .down
+{
+	display:flex;
+	flex-direction:column;
+	margin-right:-30px;
+}
+#logo
+{
+	display:flex;
+}
+#logo img
+{
+
+	width:50px;
+	height:50px;
+	margin-top: 12px;
+	margin-left: 12px;
+}
+#logo h1
+{
+	width:25px;
+	margin-top:5px;
+	margin-left:5px;
+	
+}
+#logo p
+{
+	margin-top:40px;
+	margin-left:-10px;
+}
+nav ul li
+{
+	margin-top:10px;
+}
+img
+{
+	width:1100px;
+	height: 350px;
+	border-radius: 5px;
+	margin-top: 50px;
+}
+/*.bordure
+{
+	border:1px black solid;
+	padding:10px;
+	border-radius: 15px 15px;
+	background-color:red;
+	<li><a href="#" class="bordure">Publier Une Annonce</a></li>
+}*/
+.couleur
+{
+	border:1px black solid;
+	padding:10px;
+	border-radius: 15px 15px;
+	background-color:red;
+	color:white;
+}
+.blanc a:hover{
+	color: white;
+}
+nav p
+{
+	margin-top:5px;
+}
+.element
+{
+	font-weight: bold;
+}
+/*Section */
+section
+{
+	display:flex;
+}	
+form
+{
+	background-color: #eff0f1;
+	border:1px solid black;
+	border-radius: 5px;
+	width:200px;
+	padding: 25px;
+	margin-top: 50px;
+}
+.element1{
+	margin-top: 20px;
+	font-weight: bold;
+}
+.type{
+	margin-top: 5px;
+}
+.budget
+{
+	width:90px;
+	border-radius:5px;
+	margin-top: 5px;
+}
+.chambres
+{
+	width:190px;
+	margin-top:5px;
+	border-radius: 5px;
+
+}
+.caract
+{
+	margin-top: 5px;
+}
+.crit
+{
+	margin-top:5px;
+}
+.bien
+{
+	margin-top: 5px;
+}
+.region
+{
+	width: 190px;
+	margin-top: 5px;
+	border-radius: 5px;
+}
+/*footer*/
+#final
+{
+	background-color: #80F0D1;
+	margin-top: 70px;
+}
+footer
+{
+	display:flex;
+	justify-content: space-around;
+	height:250px;
+	background: url('separateur.png') repeat-x top;
+    
+}
+footer ul 
+{
+	list-style: none;
+	display:flex;
+	flex-direction: column;
+}
+footer ul li
+{
+    margin-top: 20px;
+    margin-right: 100px;
+}
+footer ul a
+{
+	text-decoration:none;
+	color:white;
+	
+}
+.element2 img
+{
+	width:20px;
+	height: 20px;
+	margin-right: 10px;
+	margin-top: 100px;
+}
+.element1
+{
+	display:flex;
+	flex-direction:column; 
+	
+}
+.element1 img
+{
+	width:100px;
+	height: 100px;
+	margin-left: 20px;
+}
+.element1 h1
+{
+    color:white;
+   font-size: 1.3em;
+   margin-left: 20px;
+}
+.chercher
+{
+	
+	margin-left:80px;px;
+	margin-top: 20px;
+	width:120px;
+	color:white;
+	border-radius: 5px;
+	background-color: red;
+	border:1px solid black;
+	font-weight: bold;
+}
+.annonces
+{
+	margin-top: 50px;
+}
+.annonce
+{
+	display:flex;
+	border:1px solid black;
+	background-color: #eff0f1 ;
+	border-radius: 5px;
+	margin-left: 5px;
+	/*margin-top: 50px;*/
+	height: 250px;
+	margin-bottom: 15px;
+
+
+}
+.image1 img
+{
+	
+    margin-top: 0;
+	width:200px;
+	height:100%;
+	
+}
+.description
+{
+	padding-left: 10px;
+	text-align: justify;
+	margin-left:7px;
+	padding-right: 10px;
+
+}
+.description h1
+{
+	font-size: 1.5em;
+}
+.description .paragraphe1
+{
+	color:blue;
+	font-weight: bold;
+}
+.plus a
+{ 
+	text-decoration: none;
+	color:white;
+	font-weight: bold;
+	padding-left: 2px;
+}	
+.plus
+{
+	border:1px solid black;
+	width:105px;
+	background-color: red;
+	border-radius: 5px;
+	margin-left:78%;
+	margin-top:45px;
+}

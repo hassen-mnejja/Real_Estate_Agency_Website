@@ -1,0 +1,43 @@
+package agence.model;
+
+import java.util.Date;
+
+public class Contrat {
+	private int idContrat;
+	private Client client;
+	private BienImmobilier bien;
+	private long prix;
+	private Date date;
+	public int getIdContratt() {
+		return idContrat;
+	}
+	public void setIdContrat(int idContrat) {
+		this.idContrat = idContrat;
+	}
+	public Client getClient() {
+		return client;
+	}
+	public void setClient(Client client) {
+		this.client = client;
+	}
+	public BienImmobilier getBien() {
+		return bien;
+	}
+	public void setBien(BienImmobilier bien) {
+		this.bien = bien;
+	}
+	public long getPrix() {
+		return prix;
+	}
+	public void setPrix(long prix) {
+		this.prix = prix;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+
+}

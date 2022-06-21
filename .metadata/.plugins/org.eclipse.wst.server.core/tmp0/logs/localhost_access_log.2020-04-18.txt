@@ -1,0 +1,14 @@
+127.0.0.1 - - [18/Apr/2020:19:21:48 +0100] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:21:55 +0100] "GET /backoffice/home HTTP/1.1" 200 4349
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:21:55 +0100] "GET /backoffice/Styles/HomeStyle.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:21:57 +0100] "GET /backoffice/prive/ajouteragent HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:21:57 +0100] "GET /backoffice/login HTTP/1.1" 200 1231
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:21:57 +0100] "GET /backoffice/Styles/MonStyle.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:21:57 +0100] "GET /favicon.ico HTTP/1.1" 404 720
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:22:01 +0100] "POST /backoffice/login HTTP/1.1" 200 691
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:22:06 +0100] "GET /backoffice/home HTTP/1.1" 200 4349
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:22:27 +0100] "GET /backoffice/login HTTP/1.1" 200 1231
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:22:29 +0100] "POST /backoffice/login HTTP/1.1" 200 796
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:22:31 +0100] "GET /backoffice/home HTTP/1.1" 200 4350
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:22:34 +0100] "GET /backoffice/prive/ajouteragent HTTP/1.1" 200 6392
+0:0:0:0:0:0:0:1 - - [18/Apr/2020:19:22:34 +0100] "GET /backoffice/1351.js HTTP/1.1" 304 -
